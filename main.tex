@@ -1,42 +1,57 @@
+\documentclass[sigconf]{acmart}
 
-\documentclass[format=acmsmall, review=false, screen=true]{acmart}
-\usepackage{indentfirst}
+%Creates indent at first paragraph
+\usepackage{indentfirst} 
 
-%START OF DCUMENT
-\begin {document}
+%Conference/School
+\acmConference[Florida International University]{FIU}{November 2018}{Miami, FL USA}
+\acmYear{2018}
+\copyrightyear{2018}
 
-	%Title page information including title, authors and date
-	\title{A Network Security Survey: WSN, SDN, Wireless, IoT}
-	\author{Daimion Reid, Eric Ruiz}
-	\date {\today}
+\begin{document}
+
+%Title
+\title{A Network Security Survey: WSN, SDN, Wireless, IoT}
+
+%Author1
+\author{Daimion Reid}
+\affiliation{%
+  \institution{Florida International University}
+  \city{Miami}
+  \state{Florida}
+}
+
+%Author2
+\author{Eric Ruiz}
+\affiliation{%
+  \institution{Florida International University}
+  \city{Miami}
+  \state{Florida}
+}
+
+\begin{CCSXML}
+<ccs2012>
+<concept>
+<concept_id>10003033.10003083.10003014</concept_id>
+<concept_desc>Networks~Network security</concept_desc>
+<concept_significance>300</concept_significance>
+</concept>
+</ccs2012>
+\end{CCSXML}
+
+\ccsdesc[300]{Networks~Network security}
 
 
-	%Adding split columns
-	\twocolumn
+\keywords{Network, Security, Wireless, Software Defined Networking, Internet of Things}
 
 
-	%Introduction	
-	\input{Introduction.tex}
+\maketitle
 
-	%Paper 1 Survey
-	\input{Paper1Survey.tex}
+%Inputs content
+\input{Body}
 
-	%Paper 2 Survey	
-	\input{Paper2Survey.tex}
+%References
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{References}
 
-	%Paper 3 Survey
-	\input{Paper3Survey.tex}
-
-	%Paper 4 Survey
-	\input{Paper4Survey.tex}
-
-	%Conclusion
-	\input{Conclusion.tex}
-
-	%References
-	\bibliography{References} 
-	\bibliographystyle{ACM-Reference-Format}
-
-
-%END OF DOCUMENT
-\end {document}
+\end{document}
