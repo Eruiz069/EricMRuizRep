@@ -1,0 +1,56 @@
+%New Section: A Survey on Security Threats and Authentication Approaches in Wireless Sensor Networks
+\section {A Survey on Security Threats and Authentication Approaches in Wireless Sensor Networks}
+%New Subsection: Overview
+\subsection {Overview}
+\smallskip
+
+Sensor networks distributed wireless technology are used in numerous applications. Sensors measure a specific data point like temperature or magnetic field. Due to having low processing overhead, their cost is low as well. A WSN also requires lots of sensors, a data center, and a base station.
+
+\smallskip
+
+Current work on sensors focus on designing them to withstand harsh weather conditions, decrease overall energy consumption, lowering the cost to produce individual sensors while maintaining high capacity, and improving overall security and speed of data flow.
+
+\smallskip
+
+Once sensor nodes have been placed, they are unobservable and manual storage is impossible. This can leave important data vulnerable so it important to implement information security precautions. Wireless sensor networks often rely on broadcast messages. Sensor nodes must also be able to authenticate other nodes along with their messages while ensuring that routing is secure. 
+
+%New Subsection: WSN Architecture
+\subsection {WSN Architecture}
+\smallskip
+
+WSN’s rely on multi-hop transmission to transmit sensor data to a data center safely and quickly. The final node to communicate with the base station is called the sink node. The order of transmission is sensor node, neighboring nodes, sink node, base station, data center.
+
+%New Subsection: Types of Attacks on WSNs
+\subsection {Types of Attacks on WSNs}
+\smallskip
+
+Because WSN’s operate over wireless, they are exposed to more attacks such as those that can alter routing amongst nodes, create fake messages, and increase delays in the network; these methods are sometimes called spoofing.
+
+\smallskip
+
+Another form of attack is selective forwarding in which a node is controlled by an attacker as if it were a black hole. This node will then destroy messages or has them stop forwarding to cause jams and data collision within the network.
+
+\smallskip
+
+Sinkhole attacks are one type of selective forwarding. In this instance, the bad node is like a sinkhole. This sink node pulls all data toward itself and convinces other nodes to receive its tampered packets. A sinkhole attack provides the setting for a wormhole attack which is when two nodes are convinced they are neighbors. These two nodes will be responsible for the attack where one node is on the network neighboring the base station, and one is a neighbor of the target node which ultimately creates shortcuts within the network.
+
+\smallskip
+
+A Sybil attack is when one node, the Sybil node, takes on the identity of other nodes. This decreases the safety of fault tolerant systems, changes location information, and can also begin selective forwarding attacks.
+
+\smallskip
+
+In a HELLO flood attack, the attacker node deceives other nodes into believing they are neighbors. Upon the receipt of nefarious HELLO packets, the network experiences confusion. 
+During an acknowledgement spoofed attack, an attacker preys on dead nodes by telling them they are still alive and receiving their data. This can be a gateway to selective forwarding as well.
+
+%New Subsection: Authentication Protocol
+\subsection {Authentication Protocol}
+\smallskip
+
+WSN’s require both cross-node as well as node-to-center authentication to ensure that nodes recognize one another and trade data in a secure manner. Elliptic Curve Cryptography (ECC) is generally used for security protocols in WSN’s to safeguard against identity impersonation attacks. The Sensory Network Encryption Protocol (SNEP) adds encrypted text as a message authentication code (MAC) before a chaining encryption. This prevents attackers from translating any plain text. The base station uses the TESLA protocol to derive the MAC. When a node is receiving a packet, it must ensure that the MAC key is intended for the base station. First, the message is placed in intermediate memory. When the receiving note declares the key, the base station then broadcasts all the MAC keys. If it is a true key, the package is moved to the buffer cache. Security Protocol for Sensor Networks (SPINS) communications secure wireless sensor networks using both TESLA and SNEP. The Localized Encryption and Authentication Protocol (LEAP) provides confidentiality and authentication by equipping each node with four types of keys: the individual key, pairwise key, cluster key, and group key. One disadvantage of LEAP is the assumption that the sink node will not be compromised. \cite {karakaya2018survey}
+
+%New Subsection: Observations
+\subsection{Observations}
+\smallskip
+
+Energy efficiency, security, and routing are some of the challenges a WSN will face. Of those, security seems to pose the biggest challenge to WSN’s as the innovation is just not there. Due to the amount of overheard that can be incurred with new security mechanisms, finding the balance proves to be an issue that goes unresolved. The level of security needed will be based on the application, with some applications requiring greater security than others. Security is a process that should begin at system origination and remain updated as the attacks continue to advance and new attacks are uncovered. Current comparisons and work in the field show that the authentication methods are commonly used, yet further study of key infrastructure and complexity are necessary in future research.

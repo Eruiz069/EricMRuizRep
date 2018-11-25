@@ -1,0 +1,103 @@
+%New Section: Security Issues and Challenges in Wireless Sensor Networks: A Survey
+\section {Security Issues and Challenges in Wireless Sensor Networks: A Survey}
+%New Subsection: Overview
+\subsection {Overview}
+\smallskip
+
+Sensor nodes are the basic building block of wireless sensor networks (WSN). The components of a sensor node vary based on the context and situation. The units of a sensor node generally include memory, processor, power, sensor, transceiver, position finding system, and a mobilizer. The role of the transceiver unit is critical to the sensor node as it is responsible for sending and receiving data and/or signals. The transceiver also accounts for more power consumption than the other units so as sensor nodes are being designed, the transceiver should be designed to reduce energy consumption when sending and receiving data. While the market offers different sensor nodes, the nodes tend to have a small memory space, limited processing power, and a small flash ROM to compile processing data. A general reference architecture defines the core functionalities, standards, and the application program interface (API). APIs facilitate an application developer to interact with the system services. The WSN reference architecture includes Physical hardware/Sensor nodes, Operating System/Firmware, System and Storage Services, Programing Abstractions and APIs, and Applications. A WSN is comprised of multiple sensor nodes with individualized roles. The Sensor node senses the events that are collected by the aggregator-nodes. Then, the aggregator-nodes forward all events to the Base Station where it will forward all events to a remote server directly or via the Internet. The role of the Base Station node is vital in WSN as it is responsible for the collection of critical data, topology generation and malfunctions in the network. The aggregator node is responsible for hiding the base station node from inside and outside attackers, along with reducing delays and increasing network availability. 
+
+%subsection {WSN Applications} 
+\subsection {WSN Applications} 
+\smallskip
+
+Today, WSN’s are used in industry, society, agriculture, wild life, and environmental protection arenas just to name a few areas. WSN are interconnected sensor devices that produce a huge amount of data, however they are also resource constrained devices. Sensor devices are used in buildings, college campuses, road traffic monitoring, vehicle tracking systems, atomic reactors, and other mission critical systems. 
+
+\smallskip
+
+WSN’s in the industry arena include such categories as gas sector, physical and environmental where sensors monitor temperature, humidity, moisture in the soil, wind, and pressure to improve efficiency. WSN facilitates society in areas such as traffic monitoring and even health care. With the help of WSN, doctors can diagnose a disease more precisely using a body area network to monitor body temperatures, blood pressure, sugar, and stress levels. The WSN could also lead to smart cities where everything is interconnected. Smart homes, buildings, and even bridges can leverage WSN to reduce energy consumption and monitor reliability of structural materials used in building and bridges. In the wild life arena, WSN can be leveraged to track animal’s behavior such as how the interact with others and their environment as well as their habits. \cite {bangash2017security}
+
+\smallskip
+
+In agriculture, WSN’s can monitor many important variables needed for successful crops such as different soil types, temperature, winds, water quality, humidity, and sunlight intensity. All of these variables are important and can affect the agriculture systems if they are not monitored accordingly. This scientific approach to agriculture leads to smart irrigation systems that reduce overall excess waste of water. In a disaster situation, sensor nodes can be deployed to gather data and have a better overview of the situation and the appropriate mitigation steps that should be taken. Pre-installed sensor networks can be leveraged to notify the proper authorities in the event that something such as a forest fire or a flood were to occur. WSNs are also used for environmental protection efforts in by monitoring things such as atomic reactors, volcanos, and pollution. \cite {bangash2017security}
+
+%New Subsection: Security Requirements
+\subsection {Security Requirements} 
+\smallskip
+
+WSN’s revolve around three basic security requirements: confidentiality, integrity and authentication. When WSNs are designed around the basic security requirements, network stability as well as operations will become optimal. While cryptography can help to protect the system, a secure network should consider authorization and authentication. Authorization will allow data access only to legitimate users and authentication will ensure that the data is from the right source. A strong authentication reduces attacks related to authorization. For this survey, the authors categorized WSN security requirements into four levels: data level security, node level security, code or program level security, and network level security. \cite {karakaya2018survey}
+
+%New Subsubsection: Data Level Security
+\subsubsection {Data Level Security:}
+\smallskip 
+
+In WSN’s, data that is in transit can be captured by adversaries who can then alter the captured data and attempt to resend it. Data level security defends against corruption and modification but also guarantees protection from unauthorized access. Data level security in WSN relies on authentication, confidentiality, integrity and freshness. Authentication ensures that the data is coming from the correct source. This can be accomplished by incorporating a username and password, using tokens, digital certificates, or smart cards. Confidentiality refers to assuring that only authorized nodes can access data and unauthorized nodes cannot. This protects the content from being accessed by someone in which it was not directed to. while assuring the privacy of the data. Integrity deals with the authenticity of the information. Is the information accurate, compete, and trustworthy? Freshness ensures the that old messages cannot be replayed, and that the information is the most recent. Whenever packets are received out-of-order, the freshness is known as weak freshness. Packets received in-order is called strong freshness. At the data level, we want to strive for strong freshness of all data. 
+
+%New Subsubsection: Node Level Security
+\subsubsection {Node Level Security:}
+\smallskip
+
+Due to the hostile nature of the environment some situations will require more security. Some instances include military operations, fires in wild-life, cold temperature zones and atomic reactors. Proper node level security protocols will avert adversaries access to a sensor node and to obtaining the cryptographic keys and the underlined designed secure protocol. To ensure node level security, consideration must be given to availability, authorization, non-repudiation, and secure localization. At node level security, availability refers to the information being accessible to the parties who need the information and are also authorized to receive it. Critical and logical phenomenon’s such as high temperatures, communication issues, node failures, floods, and storms will affect availability but WSN’s should ensure that nodes are available at any given time. If a network is not available, it is deemed useless regardless of how strong it may be. WSNs should ensure that all nodes and gateways must be available all the times. Authorization, or a right to access, is controlled by the network administrator. In WSN’s, the network administrator assigns different rules and polices for users based on their specific needs. Some users may require access to modify information while others may only need access to read the information without having to modify it. At the same time, some nodes have access to read data, some nodes can send data to the base station, and some nodes cannot do either. Authorization is a critical aspect of WSN’s and it is generally controlled by the network administrator. Non-repudiation in WSN’s prevent a node from later denying that is was involved in communication. Non-repudiation also provides the digital evidence needed to prove the origin and integrity of the data. In WSN’s, secure localization refers to being able to locate a sensor node in the network. The ability to do so automatically and accurately is crucial when designing a sensor to locate a fault and analyze errors in a network. 
+
+%New Subsubsection: Network Level Security
+\subsubsection {Network Level Security:}
+\smallskip
+
+Unauthorized data or system access is controlled by a network administrator who manages the overall network level security. The network level security is comprised of deploying and enforcing policies and rules that will ensure the safety of the network hardware and data, scalability, reliability and integrity for the network. To be effective, network level security in a WSN must consider self-organization, time synchronization, scalability surrounding security, energy consumption, performance. In a WSN, self-organization can be leveraged to try and mitigate certain vulnerabilities a sensor network is inherently susceptible to such as eavesdropping, man in the middle attacks, and denial of service attacks.
+
+\smallskip
+
+Regarding time synchronization, it is a way of synchronizing sensor nodes with the centralized sensor node to avoid replay packets and to ensure that sensor nodes guarantee real time data and data freshness. Coordination of time between sensor nodes is also vital in sensing events such as temperatures, humidity, and movement. 
+
+\smallskip
+
+Scalability is important in a WSN of the number of sensor nodes is generally large and it is important to ensure that the system can continue to operate efficiently as the network grows. WSN’s must be built with the capabilities to seamlessly incorporate new nodes, when and if needed, without any adverse effects on the network. Another important aspect of network level security is surrounding security, which consists of proper surveillance mechanisms that help monitor malicious activity such as surveillance cameras and sensors. Surrounding security may be more practical in some fields than others, such as being utilized for wild life monitoring and industrial applications, but not so much in military operations involving monitoring the enemy. WSN’s inherently suffer from power consumption and their resource constraints. Lack of, or even insufficient, power can result in the node becoming unavailable or even drop messages as there is not enough power to forward. Because of this, sensor nodes in the network must be designed to conserve energy whenever possible. Often time a tough choice must be made between performance and energy consumption in the network. For example, multifaceted cryptography applications involving high level security will be a detriment to the senor battery life, while low processing operations such as measuring temperature and humidity will conserve more energy. 
+
+%New Subsection: Operating System and Tools for WSNs
+\subsection {Operating System and Tools for WSNs} 
+\smallskip
+
+In any computing system, the operating system (OS) is in charge of governing all operations.). A robust OS is necessary in WSN’s to deal with standard issues that may arise but more importantly to address security holes. Some key points to note is that the OS may provide system level security include such as granting access or giving permission, memory protection, and enabling privilege mode. Due to the limited resource constraints of WSN’s, those in charge of designing the OS will be faced with challenges. To overcome some of these challenges, re-programing may be used to while also being able to provide more flexibility. By Implementing re-programing, we can see how adaptable and flexible the system is to changes that occur in the network. A system that has static behavior can be changed to dynamic behavior through reprograming. The roles of wireless network tools are crucial to the operating system to manage, configure, and update the sensor nodes. These tools also play a vital role in programing, examining, analyzing media, and troubleshooting the entire network. 
+
+%New Subsection: Attacks
+\subsection {Attacks}
+\smallskip
+
+As discussed earlier, WSN’s have numerous applications but are inherently susceptible to a long list of possible attacks. The attacks on WSN’s are broken down into several groups: physical attacks, communication attacks, code attacks, base station attacks, and routing protocol attacks. Within those groups, some attacks include data alteration, node stealing and tampering, traffic tracing, and tampering. Communication between nodes can also be monitored by adversaries who may attempt to steal data. 
+
+\smallskip
+
+The primary objective of physical attacks in WSN’s is to remove or physically damage the sensor. Once the sensor is removed and is in the possession of the attacker, he can analyze the internal code and extract information such as the cryptographic keys and then later implant the modified node back into the network which will lead to future attacks where the attacker identity is concealed. Some examples of physical attacks in WSN’s are new node injection attacks, Sybil attacks, reverse engineering attacks. To give an example, a Sybil attack is when an attacker attempts to make the node have various identities which will it difficult to tell the difference between a legitimate node and a phony node.
+
+\smallskip
+
+Communication attacks in WSN’s are considered logical attacks where an attacker can corrupt or alter the sensor node remotely. Some instances of communication attacks in WSN’s are jamming, DoS, and collision attacks. A jamming attack is when an attacker attempts to impede, or jam, the communication signal. This attack is usually against the physical layer in a WSN architecture. 
+
+\smallskip
+
+Code attacks in WSN’s refer to vulnerabilities at the application level such as vulnerabilities within software programing and coding. Some cases of code attacks in WSN’s are overflow attacks and changing the existing node remotely by re-programming. In an overflow attack, the attacker overflows the buffer in order to make the node become unavailable and unable to make new communications. 
+
+\smallskip
+
+Base station attacks in WSN’s attempt to gather data sent to the base station from all the surrounding nodes. Some common base station attacks in WSN’s are source location attacks, destination location attacks, traffic analysis attacks, traffic tracing attacks, and content analysis attacks. If the base station were to be compromised, all the sensor nodes and associated deployment cost will also be compromised. 
+
+\smallskip
+
+Routing protocol attacks in WSN’s are caused by weak protocols which could give an adversary access to privileged mode. Some examples of routing protocol attacks in WSN’s are black hole attacks and HELLO flood attacks.
+
+%New Subsection: Defenses/Countermeasures
+\subsection {Defenses/ Countermeasures}
+\smallskip
+
+To prevent the attacks on WSN’s, multiple approaches must be utilized to protect WSN’s from attackers. These approaches provide data and destination privacy while preventing physical attacks, communication attacks, code attacks, base station attacks, and routing protocol attacks. To guarantee business privacy and integrity cryptography techniques must be used. However, it is difficult to apply traditional passwords techniques such as two-factor authentication in WSNs. It is recommended that when implementing a cryptographic approach in defense of confidentiality, integrity, availability, to use a light weight protocol. Sensor nodes are surrounded by wireless signals which creates a huge impediment to implement an adequate security system. Noise can affect the signal strength and it is impossible to prevent signal manipulation. Therefore, it is advised to deploy WSNs in a non-susceptible noise area. Regarding securing a wireless link, it is almost inconceivable to avoid signal propagation. Availability is one of the key pillars of WSN’s and is there to ensure that data should be available when needed. Some approaches in defense for availability are implementing redundancy for substitute and failure, adequate power routing protocols, crisis energy backup, and guarding against detrimental actions such as DoS attacks. Application level defense in WSN’s requires compact code for resource constraints devices like sensor node and ensuring that there are no vulnerabilities within the actual programming of the application. 
+
+%New Subsection: Challenges
+\subsection {Challenges} 
+\smallskip
+
+There are several challenges when it comes to WSN’s. WSN’s must be designed accordingly to address performance, cloud computing, reliability, SDN integration, scalability, and virtualization. In addressing these challenges, focus must be given to having strong routing protocols that handle mobility nodes and consider base station privacy. Key management and distribution are also an important challenge for WSN’s and will continue to be an area of research.
+
+%New Subsection: Observations
+\subsection {Observations}
+\smallskip
+
+There are several challenges when it comes to WSN’s. WSN’s must be designed accordingly to address performance, cloud computing, reliability, SDN integration, scalability, and virtualization. In addressing these challenges, focus must be given to having strong routing protocols that handle mobility nodes and consider base station privacy. Key management and distribution are also an important challenge for WSN’s and will continue to be an area of research. Overall, I feel the researcher did an outstanding job of providing an in-depth analysis in the area of wireless senor networks. The future for WSN is promising. However, better techniques are needed for security, privacy, power, computational-capability, and scalability. Software defined networking integration in WSN will transform the architecture of WSN. Benefits and challenges of cloud services and virtualization technology also need attention. After surveying this paper we’ve gained a better and understanding and comprehensive knowledge in WSN.

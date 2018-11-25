@@ -1,25 +1,42 @@
 
 \documentclass[format=acmsmall, review=false, screen=true]{acmart}
+\usepackage{indentfirst}
+
+%START OF DCUMENT
 \begin {document}
-Abstract
 
-Introduction
-\input{Introduction.tex}
+	%Title page information including title, authors and date
+	\title{A Network Security Survey: WSN, SDN, Wireless, IoT}
+	\author{Daimion Reid, Eric Ruiz}
+	\date {\today}
 
-Part1
-\input{Part1.tex}
 
-Part2
-\input{Part2.tex}
+	%Adding split columns
+	\twocolumn
 
-Part3
-\input{Part3.tex}
 
-References
+	%Introduction	
+	\input{Introduction.tex}
 
-This is an exmaple citation \cite {agrawal2012fiber}
+	%Paper 1 Survey
+	\input{Paper1Survey.tex}
 
-\bibliography{references} 
-\bibliographystyle{ACM-Reference-Format}
+	%Paper 2 Survey	
+	\input{Paper2Survey.tex}
 
+	%Paper 3 Survey
+	\input{Paper3Survey.tex}
+
+	%Paper 4 Survey
+	\input{Paper4Survey.tex}
+
+	%Conclusion
+	\input{Conclusion.tex}
+
+	%References
+	\bibliography{References} 
+	\bibliographystyle{ACM-Reference-Format}
+
+
+%END OF DOCUMENT
 \end {document}
